@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <style>
+    /* Add custom styles for centering content */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    .login-container {
+      text-align: center;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .login-container img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <img src="/Desktop/Final Project/pokemon_logo.png" alt="Pokemon Logo">
+    <h1>Welcome</h1>
+    <form action="/login" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="/register">Register</a></p>
+  </div>
+</body>
+</html>
+
