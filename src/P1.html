@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Welcome, <%= username %></h1>
+  <h2>Your Favorite Pokémon:</h2>
+  <ul id="favorite-list">
+    <% favorites.forEach((favorite) => { %>
+      <li>
+        <%= favorite.name %>
+        <button class="delete-btn" data-id="<%= favorite._id %>">Delete</button>
+      </li>
+    <% }); %>
+  </ul>
+  <h2>Search Pokémon:</h2>
+  <form id="search-form">
+    <input type="text" id="pokemon-search" placeholder="Search Pokémon...">
+    <button type="submit">Search</button>
+  </form>
+  <div id="search-results"></div>
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
